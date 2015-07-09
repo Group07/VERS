@@ -6,7 +6,7 @@ import com.avers.dto.UserDTO;
 /**
  * Created by GoldBows on 7/9/2015.
  */
-public interface userDAO {
+public interface UserDAO {
 
     public void insertData(UserDTO user);
 }

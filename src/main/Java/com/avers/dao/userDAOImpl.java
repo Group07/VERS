@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 /**
  * Created by GoldBows on 7/9/2015.
  */
-public class userDAOImpl {
+public class UserDAOImpl {
     @Autowired
     DataSource dataSource;
 

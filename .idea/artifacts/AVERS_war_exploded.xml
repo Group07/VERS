@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="AVERS:war exploded">
-    <output-path>$PROJECT_DIR$/target/recordsSystem</output-path>
+    <output-path>$PROJECT_DIR$/target/recordsSystem.war</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
