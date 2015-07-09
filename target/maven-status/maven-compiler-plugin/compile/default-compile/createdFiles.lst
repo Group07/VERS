@@ -1,3 +1,4 @@
+com\avers\Utils\encryption\PasswordEncoderGenerator.class
 com\avers\services\UserService.class
 com\avers\dao\UserDAO.class
 com\avers\dto\UserDTO.class
