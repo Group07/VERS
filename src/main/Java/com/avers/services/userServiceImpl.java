@@ -10,9 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserDAO userDAO;
+    UserDAO userDao;
+
     @Override
     public void insertData(UserDTO user) {
-        userDAO.insertData(user);
+        userDao.insertData(user);
     }
 }

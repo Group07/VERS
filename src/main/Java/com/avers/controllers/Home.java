@@ -1,5 +1,8 @@
 package com.avers.controllers;
 
+import com.avers.dto.UserDTO;
+import com.avers.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class Home {
+
+    @Autowired
+    UserService userService;
 
     @RequestMapping(value = {"/", "/welcome**"}, method = RequestMethod.GET)
     public ModelAndView defaultPage() {
@@ -34,6 +40,13 @@ public class Home {
         model.addObject("title", "Spring Security Login Form - Database Authentication");
         model.addObject("message", "This page is for ROLE_ADMIN only!");
         model.setViewName("admin");
+
+        //testing user adding functionality
+/*        UserDTO user = new UserDTO("test","test");
+        userService.insertData(user);*/
+
+        //testing user adding functionality
+
         return model;
 
     }

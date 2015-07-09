@@ -4,22 +4,33 @@ package com.avers.dto;
  * Created by GoldBows on 7/9/2015.
  */
 public class UserDTO {
-    private Object username;
-    private Object password;
+    private String username;
+    private String password;
+
+    public UserDTO() {
+
+    }
 
     public Object getUsername() {
         return username;
     }
 
-    public void setUsername(Object username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public Object getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Object password) {
+    public void setPassword(String password) {
         this.password = password;
     }
+
+    public UserDTO(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+
 }

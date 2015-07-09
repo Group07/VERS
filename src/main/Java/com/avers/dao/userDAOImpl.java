@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 /**
  * Created by GoldBows on 7/9/2015.
  */
-public class UserDAOImpl {
+public class UserDAOImpl implements UserDAO {
     @Autowired
     DataSource dataSource;
 
