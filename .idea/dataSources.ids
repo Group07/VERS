@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - aversdb@localhost" uuid="ac3edb2d-aa64-4a9e-82fa-512e20c1fdec">
-    <database-info product="MySQL" version="5.6.22-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="aversdb"/>
-    <table name="user_roles" schema="" catalog="aversdb" type="TABLE">
-      <column name="user_role_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ROLE" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="user_role_id"/>
-      <foreign-key name="fk_username" columns="username" ref-table="users" ref-schema="" ref-catalog="aversdb" ref-columns="username" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="uni_username_role" unique="true" columns="ROLE,username"/>
-      <index name="fk_username_idx" unique="false" columns="username"/>
-    </table>
-    <table name="users" schema="" catalog="aversdb" type="TABLE">
-      <column name="username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="password" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="enabled" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
-      <primary-key name="PRIMARY" columns="username"/>
-      <exported-key name="fk_username" table="user_roles" schema="" catalog="aversdb" columns="username"/>
-    </table>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

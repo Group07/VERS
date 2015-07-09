@@ -2,79 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="049ae127-78c9-4440-992a-bd8d2fcd2cd8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/jdbc/UserExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/jdbc/UserRowMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/services/UserService.java" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\Java\Home.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\pages\403.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\pages\admin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\pages\hello.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\pages\login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\pages\user.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\spring-database.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\spring-security.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\classes\main\webapp\index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\controllers\Home.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\controllers\UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\dao\userDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\dao\userDAOImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\dto\UserDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\com\avers\services\userServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\Java\Home.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\pages\403.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\pages\admin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\pages\hello.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\pages\login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\pages\user.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\spring-database.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\spring-security.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\classes\main\webapp\index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\commons-logging-1.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\mysql-connector-java-5.1.30.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-aop-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-beans-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-context-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-core-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-expression-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-jdbc-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-security-acl-3.2.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-security-config-3.2.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-security-core-3.2.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-security-taglibs-3.2.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-security-web-3.2.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-tx-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-web-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\lib\spring-webmvc-3.2.9.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\pages\403.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\pages\admin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\pages\hello.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\pages\login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\pages\user.jsp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\spring-database.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\spring-security.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Academic\Final Year Project2\Source\VERS\target\recordsSystem.war\index.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/AVERS_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/AVERS_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/com/avers/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/controllers/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/pages/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-database.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-database.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/spring-database.xml" afterPath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/spring-database.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/spring-security.xml" afterPath="$PROJECT_DIR$/target/recordsSystem/WEB-INF/spring-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Academic\Final Year Project2\Source\VERS\src\main\Java\com\avers\dao\userDAO.java" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAO.java" />
-      <change type="MOVED" beforePath="E:\Academic\Final Year Project2\Source\VERS\src\main\Java\com\avers\dao\userDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAOImpl.java" />
-      <change type="MOVED" beforePath="E:\Academic\Final Year Project2\Source\VERS\src\main\Java\com\avers\services\userServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/Java/com/avers/services/UserServiceImpl.java" />
     </list>
     <ignored path="AVERS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="561">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,7 +85,7 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
               <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding />
             </state>
@@ -174,17 +105,17 @@
       <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
               <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/UserServiceImpl.java">
+      <file leaf-file-name="userServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/userServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="408">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -198,7 +129,7 @@
       <file leaf-file-name="UserRowMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/jdbc/UserRowMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="425">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -210,7 +141,7 @@
       <file leaf-file-name="UserExtractor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/jdbc/UserExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
               <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -219,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3046595" vertical-offset="0" max-vertical-offset="558">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -232,21 +163,21 @@
       <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dto/UserDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="391">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1436458396585" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
+                <marker date="1436458597570" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -322,6 +253,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -570,8 +503,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -966,11 +897,12 @@
       <workItem from="1436448766018" duration="3207000" />
       <workItem from="1436454446756" duration="1572000" />
       <workItem from="1436457894557" duration="611000" />
+      <workItem from="1436458695940" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20640000" />
+    <option name="totallyTimeSpent" value="20765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="554" y="17" width="1382" height="744" extended-state="0" />
@@ -1059,7 +991,7 @@
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1436458396585" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
+            <marker date="1436458597570" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1356,7 +1288,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
           <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
@@ -1390,16 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="561">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -1408,7 +1330,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/services/userServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
@@ -1420,22 +1342,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="561">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1436458396585" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3046595" vertical-offset="0" max-vertical-offset="558">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/com/avers/dao/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1436458597570" expanded="true" signature="378:431" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
