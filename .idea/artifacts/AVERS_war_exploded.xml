@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="AVERS:war exploded">
-    <output-path>$PROJECT_DIR$/target/recordsSystem.war</output-path>
+    <output-path>$PROJECT_DIR$/target/recordsSystem</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -28,7 +28,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\Academic\Final Year Project2\Source\VERS\target/MANIFEST.MF" />
+        <element id="file-copy" path="C:\Users\Amila\Desktop\VERS\VERS\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="AVERS/web/Web" />
     </root>

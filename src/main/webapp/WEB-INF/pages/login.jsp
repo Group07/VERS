@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page session="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page session="true"%>
 <html>
 <head>
     <title>Login Page</title>
@@ -7,19 +7,21 @@
         .error {
             padding: 15px;
             margin-bottom: 20px;
+            border: 1px solid transparent;
             border-radius: 4px;
             color: #a94442;
             background-color: #f2dede;
-            border: 1px solid #ebccd1;
+            border-color: #ebccd1;
         }
 
         .msg {
             padding: 15px;
             margin-bottom: 20px;
+            border: 1px solid transparent;
             border-radius: 4px;
             color: #31708f;
             background-color: #d9edf7;
-            border: 1px solid #bce8f1;
+            border-color: #bce8f1;
         }
 
         #login-box {
@@ -35,11 +37,11 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
 
-<h1>Spring Security Login Form (Database Authentication)</h1>
+<h1>Spring Security Password Encoder</h1>
 
 <div id="login-box">
 
-    <h2>Login with Username and Password</h2>
+    <h3>Login with Username and Password</h3>
 
     <c:if test="${not empty error}">
         <div class="error">${error}</div>
@@ -49,7 +51,8 @@
     </c:if>
 
     <form name='loginForm'
-          action="<c:url value='/j_spring_security_check' />" method='POST'>
+          action="<c:url value='/auth/login_check?targetUrl=${targetUrl}' />"
+          method='POST'>
 
         <table>
             <tr>
@@ -58,18 +61,21 @@
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type='password' name='password'/></td>
+                <td><input type='password' name='password' /></td>
             </tr>
+
             <tr>
                 <td colspan='2'><input name="submit" type="submit"
-                                       value="submit"/></td>
+                                       value="submit" /></td>
             </tr>
+
         </table>
 
         <input type="hidden" name="${_csrf.parameterName}"
-               value="${_csrf.token}"/>
+               value="${_csrf.token}" />
 
     </form>
+
 </div>
 
 </body>
