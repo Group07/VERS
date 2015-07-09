@@ -1,4 +1,4 @@
-package main.Java;
+package com.avers.controllers;
 
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;

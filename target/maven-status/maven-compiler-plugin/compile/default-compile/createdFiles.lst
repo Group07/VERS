@@ -1,0 +1,6 @@
+com\avers\dao\userDAOImpl.class
+com\avers\controllers\Home.class
+com\avers\controllers\UserController.class
+com\avers\dao\userDAO.class
+com\avers\dto\UserDTO.class
+com\avers\services\userServiceImpl.class
