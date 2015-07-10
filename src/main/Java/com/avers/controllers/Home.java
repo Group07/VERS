@@ -2,6 +2,8 @@ package com.avers.controllers;
 
 import com.avers.dto.UserDTO;
 import com.avers.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -42,11 +44,15 @@ public class Home {
         model.setViewName("admin");
 
         //testing user adding functionality
-/*        UserDTO user = new UserDTO("test","test");
+/*      UserDTO user = new UserDTO("test","test");
         userService.insertData(user);*/
-
         //testing user adding functionality
 
+        //testing logging functionality
+        Logger logger = LoggerFactory.getLogger(Home.class);
+        logger.info("Admin Logged");
+        //testing logging functionality
+        
         return model;
 
     }
