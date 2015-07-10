@@ -12,6 +12,10 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <mvc:resources mapping="/JS/**" location="/JS/"/>
+    <mvc:resources mapping="/CSS/**" location="/CSS/"/>
+    <mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
+
     <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
     <bean id="userService" class="com.avers.services.UserServiceImpl"/>
 

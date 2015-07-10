@@ -52,7 +52,7 @@ public class Home {
         Logger logger = LoggerFactory.getLogger(Home.class);
         logger.info("Admin Logged");
         //testing logging functionality
-        
+
         return model;
 
     }
