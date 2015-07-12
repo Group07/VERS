@@ -1,5 +1,6 @@
 package com.avers.controllers;
 
+import com.avers.Utils.audit.LogWrapper;
 import com.avers.dto.UserDTO;
 import com.avers.services.UserService;
 import org.slf4j.Logger;
@@ -46,12 +47,14 @@ public class Home {
         //testing user adding functionality
 /*      UserDTO user = new UserDTO("test","test");
         userService.insertData(user);*/
-        //testing user adding functionality
 
         //testing logging functionality
         Logger logger = LoggerFactory.getLogger(Home.class);
         logger.info("Admin Logged");
-        //testing logging functionality
+
+        //testing logging Wrapper functionality
+        LogWrapper logWrapper = new LogWrapper(Home.class);
+        logWrapper.info("Admin Logged");
 
         return model;
 

@@ -8,3 +8,4 @@ com\avers\controllers\Home.class
 com\avers\controllers\UserController.class
 com\avers\jdbc\UserRowMapper.class
 com\avers\dao\UserDAOImpl.class
+com\avers\Utils\audit\LogWrapper.class
