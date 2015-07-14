@@ -18,7 +18,7 @@ public class AdminHomeController {
     public ModelAndView adminPage() {
 
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Login Form - Database Authentication");
+        model.addObject("title", "Welcome");
         model.addObject("message", "This page is for ROLE_ADMIN only!");
         model.setViewName("admin");
 
