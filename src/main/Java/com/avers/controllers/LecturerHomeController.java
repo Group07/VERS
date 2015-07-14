@@ -22,17 +22,9 @@ public class LecturerHomeController {
         model.addObject("message", "This page is for ROLE_LECTURER only!");
         model.setViewName("lecturer");
 
-        //testing user adding functionality
-/*      UserDTO user = new UserDTO("test","test");
-        userService.insertData(user);*/
-
-        //testing logging functionality
-        Logger logger = LoggerFactory.getLogger(WebHomeController.class);
-        logger.info("Lecturer Logged");
-
         //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(WebHomeController.class);
-        logWrapper.info("Lecturer Logged");
+        LogWrapper logWrapper = new LogWrapper(Home.class);
+        logWrapper.info("lecturer Logged");
 
         return model;
 

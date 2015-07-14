@@ -36,29 +36,6 @@ public class Home {
 
     }
 
-    @RequestMapping(value = "/admin**", method = RequestMethod.GET)
-    public ModelAndView adminPage() {
-
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Login Form - Database Authentication");
-        model.addObject("message", "This page is for ROLE_ADMIN only!");
-        model.setViewName("admin");
-
-        //testing user adding functionality
-/*      UserDTO user = new UserDTO("test","test");
-        userService.insertData(user);*/
-
-        //testing logging functionality
-        Logger logger = LoggerFactory.getLogger(Home.class);
-        logger.info("Admin Logged");
-
-        //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(Home.class);
-        logWrapper.info("Admin Logged");
-
-        return model;
-
-    }
 
     @RequestMapping(value = "/user**", method = RequestMethod.GET)
     public ModelAndView userPage() {
