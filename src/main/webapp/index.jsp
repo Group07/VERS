@@ -7,8 +7,27 @@
     <link href="<c:url value='/CSS/main.css'/>" type="text/css" rel="stylesheet">
     <link href="<c:url value='/bootstrap/css/bootstrap.min.css'/>" type="text/css" rel="stylesheet">
     <link href="<c:url value='/bootstrap/css/bootstrap-theme.min.css'/>" type="text/css" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("Images/gods.jpg")no-repeat scroll 0 0 / 100% 100% transparent !important;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="carousel-caption">
+        <h1>Examination Records</h1>
+        <p></p>
+        <p>This will secure your personal records .....
+        </p>
+    </div>
+</div>
+
 <div class="buttonBox">
 
     <section>
