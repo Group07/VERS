@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -19,7 +20,6 @@ public class AdminHomeController {
 
         ModelAndView model = new ModelAndView();
         model.addObject("title", "Welcome");
-        model.addObject("message", "This page is for ROLE_ADMIN only!");
         model.setViewName("admin");
 
         //testing user adding functionality
@@ -33,6 +33,23 @@ public class AdminHomeController {
         //testing logging Wrapper functionality
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
         logWrapper.info("Admin Logged");
+
+        return model;
+
+    }
+
+    @RequestMapping(value= "/addLecturer", method = RequestMethod.POST)
+    public ModelAndView addLecturer(@RequestParam String username,
+                                    @RequestParam  String fullname,
+                                    @RequestParam String password) {
+
+        LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
+        logWrapper.info(username +" "+ fullname +" "+ password);
+
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Welcome");
+        model.addObject("message", "Submitted");
+        model.setViewName("admin");
 
         return model;
 

@@ -1,4 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <%@page session="true" %>
 <html>
 <head>
@@ -11,8 +13,11 @@
     <link href="<c:url value='/bootstrap/css/bootstrap-combined.min.css'/>" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h1>Title : ${title}</h1>
-<h2>Message : ${message}</h2>
+
+<h2>Title : ${title}</h2>
+<c:if test="${not empty message}">
+    <h2>${message}</h2>
+</c:if>
 
 <%--imported code--%>
 <div class="container">
@@ -24,10 +29,11 @@
             </div>
             <div id="collapseOne" class="accordion-body collapse in">
                 <div class="accordion-inner">
-                    <form method="post" action="index.html">
+                    <form method="post" action="/recordsSystem/addLecturer">
                         <p><input type="text" name="username" value="" placeholder="Username"></p>
-                        <p><input type="text" name="fullName" value="" placeholder="Full Name"></p>
+                        <p><input type="text" name="fullname" value="" placeholder="Full Name"></p>
                         <p><input type="password" name="password" value="" placeholder="Password"></p>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         <p class="submit"><input type="submit" name="commit" value="Login"></p>
                     </form>
                 </div>
