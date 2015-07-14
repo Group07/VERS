@@ -16,6 +16,7 @@
     <mvc:resources mapping="/JS/**" location="/JS/"/>
     <mvc:resources mapping="/CSS/**" location="/CSS/"/>
     <mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
+    <mvc:resources mapping="/jquery-ui/**" location="/jquery-ui/"/>
 
     <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
     <bean id="userRoleDao" class="com.avers.dao.UserRoleDAOImpl"/>

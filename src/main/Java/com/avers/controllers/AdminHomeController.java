@@ -24,7 +24,7 @@ public class AdminHomeController {
     public ModelAndView adminPage() {
 
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Welcome");
+        //model.addObject("title", "Welcome");
         model.setViewName("admin");
 
         //testing user adding functionality
@@ -49,9 +49,9 @@ public class AdminHomeController {
                                     @RequestParam String password) {
 
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
-        logWrapper.info(username + " " + fullname + " " + password);
+        logWrapper.info("request to create lecturer: username = " + username + " & full name = " + fullname);
 
-        //insert data into user tables;
+       //insert data into user tables;
         UserDTO user = new UserDTO(username, password);
         userService.insertUser(user);
 
@@ -59,7 +59,7 @@ public class AdminHomeController {
         UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
         userService.insertUserRole(userRoles);
 
-
+        //rending output
         ModelAndView model = new ModelAndView();
         model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");

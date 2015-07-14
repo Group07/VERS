@@ -1,10 +1,6 @@
 package com.avers.controllers;
 
-import com.avers.Utils.audit.LogWrapper;
-import com.avers.dto.UserDTO;
 import com.avers.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
