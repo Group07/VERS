@@ -1,11 +1,14 @@
 com\avers\Utils\encryption\PasswordEncoderGenerator.class
 com\avers\services\UserService.class
 com\avers\dao\UserDAO.class
-com\avers\dto\UserDTO.class
 com\avers\services\UserServiceImpl.class
 com\avers\jdbc\UserExtractor.class
-com\avers\controllers\Home.class
 com\avers\controllers\UserController.class
 com\avers\jdbc\UserRowMapper.class
-com\avers\dao\UserDAOImpl.class
 com\avers\Utils\audit\LogWrapper.class
+com\avers\controllers\AdminHomeController.class
+com\avers\dto\UserDTO.class
+com\avers\controllers\StudentHomeController.class
+com\avers\controllers\LecturerHomeController.class
+com\avers\controllers\WebHomeController.class
+com\avers\dao\UserDAOImpl.class
