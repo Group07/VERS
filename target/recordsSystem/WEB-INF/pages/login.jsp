@@ -4,6 +4,13 @@
 <head>
     <title>Login Page</title>
     <style>
+        body {
+            background: url("Images/add.jpg")no-repeat scroll 0 0 / 100% 100% transparent !important;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         .error {
             padding: 15px;
             margin-bottom: 20px;
@@ -33,10 +40,19 @@
             -moz-border-radius: 2px;
             border: 1px solid #000;
         }
+        .form-signin {
+            max-width: 380px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+        }
+
     </style>
 </head>
 <body onload='document.loginForm.username.focus();'>
-
+<div class="form-signin">
 <h1>Spring Security Password Encoder</h1>
 
 <div id="login-box">
@@ -77,6 +93,6 @@
     </form>
 
 </div>
-
+</div>
 </body>
 </html>
