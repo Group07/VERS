@@ -23,7 +23,7 @@ public class LecturerHomeController {
         model.setViewName("lecturer");
 
         //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(Home.class);
+        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("lecturer Logged");
 
         return model;

@@ -27,11 +27,11 @@ public class AdminHomeController {
         userService.insertData(user);*/
 
         //testing logging functionality
-        Logger logger = LoggerFactory.getLogger(Home.class);
+        Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
         logger.info("Admin Logged");
 
         //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(Home.class);
+        LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
         logWrapper.info("Admin Logged");
 
         return model;

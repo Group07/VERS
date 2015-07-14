@@ -9,6 +9,6 @@ com\avers\Utils\audit\LogWrapper.class
 com\avers\controllers\AdminHomeController.class
 com\avers\dto\UserDTO.class
 com\avers\controllers\StudentHomeController.class
-com\avers\controllers\Home.class
 com\avers\controllers\LecturerHomeController.class
+com\avers\controllers\WebHomeController.class
 com\avers\dao\UserDAOImpl.class
