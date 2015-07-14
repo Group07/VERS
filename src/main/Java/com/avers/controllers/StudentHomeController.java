@@ -16,8 +16,6 @@ public class StudentHomeController {
     public ModelAndView adminPage() {
 
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Login Form - Database Authentication");
-        model.addObject("message", "This page is for ROLE_STUDENT only!");
         model.setViewName("student");
 
         //testing logging Wrapper functionality

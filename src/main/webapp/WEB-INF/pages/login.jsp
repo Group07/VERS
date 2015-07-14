@@ -44,8 +44,6 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
 
-<h1>Spring Security Password Encoder</h1>
-
 <div id="login-box">
 
     <h3>Login with Username and Password</h3>
@@ -82,6 +80,8 @@
                value="${_csrf.token}" />
 
     </form>
+
+    <a href="/recordsSystem"><h4 style="float: right; color: #000000">Back =></h4></a>
 
 </div>
 
