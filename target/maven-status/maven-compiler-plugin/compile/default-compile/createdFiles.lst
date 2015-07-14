@@ -12,3 +12,4 @@ com\avers\controllers\StudentHomeController.class
 com\avers\controllers\LecturerHomeController.class
 com\avers\controllers\WebHomeController.class
 com\avers\dao\UserDAOImpl.class
+com\avers\dto\UserRolesDTO.class

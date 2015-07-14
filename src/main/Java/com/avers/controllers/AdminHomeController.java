@@ -1,8 +1,11 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
+import com.avers.dto.UserDTO;
+import com.avers.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class AdminHomeController {
 
+    @Autowired
+    UserService userService;
+
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public ModelAndView adminPage() {
 
@@ -23,8 +29,8 @@ public class AdminHomeController {
         model.setViewName("admin");
 
         //testing user adding functionality
-/*      UserDTO user = new UserDTO("test","test");
-        userService.insertData(user);*/
+        UserDTO user = new UserDTO("test","test");
+        userService.insertData(user);
 
         //testing logging functionality
         Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
