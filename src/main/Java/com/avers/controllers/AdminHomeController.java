@@ -2,9 +2,8 @@ package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
 import com.avers.dto.UserDTO;
+import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,12 +28,12 @@ public class AdminHomeController {
         model.setViewName("admin");
 
         //testing user adding functionality
-        UserDTO user = new UserDTO("test","test");
-        userService.insertData(user);
+/*        UserDTO user = new UserDTO("test","test");
+        userService.insertData(user);*/
 
-        //testing logging functionality
-        Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
-        logger.info("Admin Logged");
+        //testing slf4j log
+/*        Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
+        logger.info("Admin Logged");*/
 
         //testing logging Wrapper functionality
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
@@ -44,13 +43,22 @@ public class AdminHomeController {
 
     }
 
-    @RequestMapping(value= "/addLecturer", method = RequestMethod.POST)
+    @RequestMapping(value = "/addLecturer", method = RequestMethod.POST)
     public ModelAndView addLecturer(@RequestParam String username,
-                                    @RequestParam  String fullname,
+                                    @RequestParam String fullname,
                                     @RequestParam String password) {
 
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
-        logWrapper.info(username +" "+ fullname +" "+ password);
+        logWrapper.info(username + " " + fullname + " " + password);
+
+        //insert data into user tables;
+        UserDTO user = new UserDTO(username, password);
+        userService.insertUser(user);
+
+        //insert data into user_roles;
+        UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
+        userService.insertUserRole(userRoles);
+
 
         ModelAndView model = new ModelAndView();
         model.addObject("title", "Welcome");

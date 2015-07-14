@@ -4,6 +4,13 @@
 <head>
     <title>Login Page</title>
     <style>
+        body {
+            background: url("Images/add.jpg")no-repeat scroll 0 0 / 100% 100% transparent !important;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         .error {
             padding: 15px;
             margin-bottom: 20px;

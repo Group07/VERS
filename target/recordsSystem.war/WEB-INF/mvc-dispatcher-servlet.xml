@@ -18,6 +18,7 @@
     <mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
 
     <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
+    <bean id="userRoleDao" class="com.avers.dao.UserRoleDAOImpl"/>
     <bean id="userService" class="com.avers.services.UserServiceImpl"/>
 
     <mvc:annotation-driven/>

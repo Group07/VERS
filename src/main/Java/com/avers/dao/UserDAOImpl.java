@@ -1,5 +1,6 @@
 package com.avers.dao;
 
+import com.avers.Utils.encryption.PasswordEncoderGenerator;
 import com.avers.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,12 +14,15 @@ public class UserDAOImpl implements UserDAO {
     @Autowired
     DataSource dataSource;
 
-    public void insertData(UserDTO user) {
+    public void insertUser(UserDTO user) {
+
+        String encryptedPassword = PasswordEncoderGenerator.bCrypt(user.getPassword(), 11);
+
         String sql = "INSERT INTO users" + "(username,password) VALUES(?,?)";
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
-        jdbcTemplate.update(sql, user.getUsername(), user.getPassword());
+        jdbcTemplate.update(sql, user.getUsername(), encryptedPassword);
 
 
     }

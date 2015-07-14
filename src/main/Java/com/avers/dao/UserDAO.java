@@ -8,5 +8,6 @@ import com.avers.dto.UserDTO;
  */
 public interface UserDAO {
 
-    public void insertData(UserDTO user);
+    public void insertUser(UserDTO user);
+
 }

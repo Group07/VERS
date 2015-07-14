@@ -1,7 +1,9 @@
 package com.avers.services;
 
 import com.avers.dao.UserDAO;
+import com.avers.dao.UserRoleDAO;
 import com.avers.dto.UserDTO;
+import com.avers.dto.UserRolesDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -12,8 +14,16 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDao;
 
+    @Autowired
+    UserRoleDAO userRoleDAO;
+
     @Override
-    public void insertData(UserDTO user) {
-        userDao.insertData(user);
+    public void insertUser(UserDTO user) {
+        userDao.insertUser(user);
+    }
+
+    @Override
+    public void insertUserRole(UserRolesDTO userRolesDTO) {
+        userRoleDAO.insertRole(userRolesDTO);
     }
 }

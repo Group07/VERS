@@ -9,6 +9,8 @@ C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\dao\UserDAOImpl.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\services\UserService.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\controllers\LecturerHomeController.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\dao\UserDAO.java
+C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\dao\UserRoleDAO.java
+C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\dao\UserRoleDAOImpl.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\dto\UserDTO.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\controllers\AdminHomeController.java
 C:\Users\Amila\Desktop\VERS\VERS\src\main\java\com\avers\controllers\UserController.java

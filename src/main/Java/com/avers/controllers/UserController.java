@@ -19,7 +19,7 @@ public class UserController {
     @RequestMapping("/insert")
     public String inserData(@ModelAttribute UserDTO user) {
         if (user != null)
-            userService.insertData(user);
+            userService.insertUser(user);
         return "redirect:/getList";
     }
 
