@@ -48,22 +48,27 @@ public class AdminHomeController {
                                     @RequestParam String fullname,
                                     @RequestParam String password) {
 
+        ModelAndView model = new ModelAndView();
+        model.setViewName("admin");
+
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
         logWrapper.info("request to create lecturer: username = " + username + " & full name = " + fullname);
 
-       //insert data into user tables;
-        UserDTO user = new UserDTO(username, password);
-        userService.insertUser(user);
+        if (username != null && !username.trim().isEmpty() & fullname != null && !fullname.trim().isEmpty() & password != null && !password.trim().isEmpty()) {
 
-        //insert data into user_roles;
-        UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
-        userService.insertUserRole(userRoles);
+            //insert data into user tables;
+            UserDTO user = new UserDTO(username, password);
+            userService.insertUser(user);
 
-        //rending output
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Welcome");
-        model.addObject("message", "Submitted");
-        model.setViewName("admin");
+            //insert data into user_roles;
+            UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
+            userService.insertUserRole(userRoles);
+
+            model.addObject("message", "Submitted");
+
+        } else {
+            model.addObject("message", "Error With submitted parameters");
+        }
 
         return model;
 
