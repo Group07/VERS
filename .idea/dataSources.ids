@@ -16,7 +16,7 @@
     <table name="lecturer" schema="" catalog="aversdb" type="TABLE">
       <column name="lecturer_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="lecturer_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="privilege_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="privilege_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="lecturer_id"/>
       <foreign-key name="fk_lecturer_id" columns="lecturer_id" ref-table="users" ref-schema="" ref-catalog="aversdb" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="fk_privilege_id_lec" columns="privilege_id" ref-table="privileges" ref-schema="" ref-catalog="aversdb" ref-columns="privilege_id" update-rule="0" delete-rule="0" deferrability="2"/>
@@ -45,8 +45,8 @@
       <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="student_reg_no" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
       <column name="student_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
-      <column name="date_of_birth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
-      <column name="privilege_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date_of_birth" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="privilege_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="student_id"/>
       <foreign-key name="fk_privilege_id_stu" columns="privilege_id" ref-table="privileges" ref-schema="" ref-catalog="aversdb" ref-columns="privilege_id" update-rule="0" delete-rule="0" deferrability="2"/>
       <foreign-key name="fk_student_id" columns="student_id" ref-table="users" ref-schema="" ref-catalog="aversdb" ref-columns="user_id" update-rule="0" delete-rule="0" deferrability="2"/>
@@ -54,7 +54,7 @@
       <index name="privilege_id_idx" unique="false" columns="privilege_id"/>
     </table>
     <table name="student_by_subjects" schema="" catalog="aversdb" type="TABLE">
-      <column name="student_subject_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="student_subject_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="subject_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="marks" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>

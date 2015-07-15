@@ -1,10 +1,7 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
-import com.avers.dto.StudentDTO;
-import com.avers.dto.SubjectDTO;
-import com.avers.dto.UserDTO;
-import com.avers.dto.UserRolesDTO;
+import com.avers.dto.*;
 import com.avers.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,11 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.sql.DataSource;
+import java.math.BigDecimal;
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Amila on 7/14/2015.
@@ -71,11 +65,11 @@ public class LecturerHomeController {
     }
 
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-    public ModelAndView addLecturer(@RequestParam String username,
-                                    @RequestParam String fullName,
-                                    @RequestParam String password,
-                                    @RequestParam String studentRegNumber,
-                                    @RequestParam String dateOfBirth) {
+    public ModelAndView addStudent(@RequestParam String username,
+                                   @RequestParam String fullName,
+                                   @RequestParam String password,
+                                   @RequestParam String studentRegNumber,
+                                   @RequestParam String dateOfBirth) {
 
         LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("request to create student: username = " + username + " & full name = " + fullName);
@@ -97,6 +91,28 @@ public class LecturerHomeController {
         model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");
         model.setViewName("lecturer");
+
+        return model;
+
+    }
+
+    @RequestMapping(value = "/addMarks", method = RequestMethod.POST)
+    public ModelAndView addMarks(@RequestParam Integer studentID,
+                                 @RequestParam Integer subjectID,
+                                 @RequestParam BigDecimal marks) {
+
+        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
+        logWrapper.info("request to add marks to student: marks = " + marks + ".");
+
+        //insert marks to a student for subject;
+        MarksDTO marksDTO = new MarksDTO(studentID, subjectID, marks);
+        userService.insertMarks(marksDTO);
+
+        //rending output
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Welcome");
+        model.addObject("message", "Submitted");
+        model.setViewName("admin");
 
         return model;
 
