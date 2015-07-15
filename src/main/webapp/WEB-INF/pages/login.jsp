@@ -2,7 +2,12 @@
 <%@page session="true"%>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>AVERS Login Page</title>
+    <script type='text/javascript' src="<c:url value='/JS/jquery-1.10.1.min.js'/>"></script>
+    <script type='text/javascript' src="<c:url value='/bootstrap/js/bootstrap.min.js'/>"></script>
+    <link href="<c:url value='/bootstrap/css/bootstrap.min.css'/>" type="text/css" rel="stylesheet">
+    <link href="<c:url value='/bootstrap/css/bootstrap-theme.min.css'/>" type="text/css" rel="stylesheet">
+    <link href="<c:url value='/bootstrap/css/bootstrap-combined.min.css'/>" type="text/css" rel="stylesheet">
     <style>
         body {
             background: url("Images/add.jpg")no-repeat scroll 0 0 / 100% 100% transparent !important;
@@ -32,7 +37,8 @@
         }
 
         #login-box {
-            width: 300px;
+            width: 400px;
+            height : 300px;
             padding: 20px;
             margin: 100px auto;
             background: #fff;
@@ -62,16 +68,16 @@
         <table>
             <tr>
                 <td>User:</td>
-                <td><input type='text' name='username'></td>
+                <td><input autofocus="" required="true" class="form-control" type='text' name='username'></td>
+
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type='password' name='password' /></td>
+                <td><input autofocus="" required="true" class="form-control" type='password' name='password' /></td>
             </tr>
-
             <tr>
-                <td colspan='2'><input name="submit" type="submit"
-                                       value="submit" /></td>
+                <br>
+                <td colspan='2'><input class="btn btn-lg btn-primary" name="submit" type="submit" value="submit" /></td>
             </tr>
 
         </table>
@@ -81,7 +87,7 @@
 
     </form>
 
-    <a href="/recordsSystem"><h4 style="float: right; color: #000000">Back =></h4></a>
+    <a href="/recordsSystem"><h4 style="float: right; color: #003bb3"> < Back</h4></a>
 
 </div>
 
