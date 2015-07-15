@@ -20,6 +20,8 @@
 
     <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
     <bean id="userRoleDao" class="com.avers.dao.UserRoleDAOImpl"/>
+    <bean id="StudentDAO" class="com.avers.dao.StudentDAOImpl"/>
+    <bean id="SubjectDAO" class="com.avers.dao.SubjectDAOImpl"/>
     <bean id="userService" class="com.avers.services.UserServiceImpl"/>
 
     <mvc:annotation-driven/>

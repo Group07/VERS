@@ -1,9 +1,11 @@
 package com.avers.services;
 
 import com.avers.dao.StudentDAO;
+import com.avers.dao.SubjectDAO;
 import com.avers.dao.UserDAO;
 import com.avers.dao.UserRoleDAO;
 import com.avers.dto.StudentDTO;
+import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     StudentDAO studentDAO;
 
+    @Autowired
+    SubjectDAO subjectDAO;
+
     @Override
     public void insertUser(UserDTO user) {
         userDao.insertUser(user);
@@ -35,5 +40,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void insertStudent(StudentDTO student) {
         studentDAO.insertStudent(student);
+    }
+
+    @Override
+    public void insertSubject(SubjectDTO subject) {
+        subjectDAO.insertSubject(subject);
     }
 }

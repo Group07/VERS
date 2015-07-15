@@ -1,7 +1,6 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
-import com.avers.dto.UserDTO;
 import com.avers.dto.StudentDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
@@ -36,7 +35,7 @@ public class LecturerHomeController {
 
     }
 
-    @RequestMapping(value = "/addLecturer", method = RequestMethod.POST)
+    @RequestMapping(value = "/addSubject", method = RequestMethod.POST)
     public ModelAndView addLecturer(@RequestParam String subjectcode,
                                     @RequestParam String subjectname,
                                     @RequestParam String semester) {
@@ -63,8 +62,9 @@ public class LecturerHomeController {
         } else {
             model.addObject("message", "Error With submitted parameters");
         }
-        return null;
+        return model;
     }
+
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     public ModelAndView addLecturer(@RequestParam String username,
                                     @RequestParam String fullName,
@@ -91,7 +91,7 @@ public class LecturerHomeController {
         ModelAndView model = new ModelAndView();
         model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");
-        model.setViewName("admin");
+        model.setViewName("lecturer");
 
         return model;
 
