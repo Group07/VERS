@@ -14,14 +14,10 @@ import java.util.Map;
 /**
  * Created by GoldBows on 7/9/2015.
  */
-public class UserDAOImpl extends JdbcDaoSupport implements UserDAO {
-
-    private DataSource dataSource;
+public class UserDAOImpl implements UserDAO {
 
     @Autowired
-    UserDAOImpl(DataSource dataSource){
-        setDataSource(dataSource);
-    }
+    DataSource dataSource;
 
     public void insertUser(UserDTO user) {
 
@@ -38,7 +34,7 @@ public class UserDAOImpl extends JdbcDaoSupport implements UserDAO {
 
     public int getUserID(String userName) {
         //testing JDBC
-        String sql = "select user_id from  users where username =" + "'" + userName + "'";
+/*        String sql = "select user_id from  users where username =" + "'" + userName + "'";
         List<UserDTO> userDTOs = new ArrayList<UserDTO>();
 
         List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
@@ -50,6 +46,7 @@ public class UserDAOImpl extends JdbcDaoSupport implements UserDAO {
 
         int userID = userDTOs.get(0).getUserID();
 
-        return userID;
+        return userID;*/
+        return 1;
     }
 }

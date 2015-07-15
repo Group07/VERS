@@ -38,7 +38,7 @@
 
         #login-box {
             width: 400px;
-            height : 300px;
+            height : 450px;
             padding: 20px;
             margin: 100px auto;
             background: #fff;

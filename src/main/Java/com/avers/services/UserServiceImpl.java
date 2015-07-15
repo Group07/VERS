@@ -20,6 +20,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     SubjectDAO subjectDAO;
+
+    @Autowired
     MarksDAO marksDAO;
 
     @Override
