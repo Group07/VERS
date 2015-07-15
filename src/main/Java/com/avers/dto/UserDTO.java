@@ -11,7 +11,7 @@ public class UserDTO {
 
     }
 
-    public Object getUsername() {
+    public String getUsername() {
         return username;
     }
 

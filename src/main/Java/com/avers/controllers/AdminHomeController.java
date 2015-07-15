@@ -27,14 +27,6 @@ public class AdminHomeController {
         //model.addObject("title", "Welcome");
         model.setViewName("admin");
 
-        //testing user adding functionality
-/*        UserDTO user = new UserDTO("test","test");
-        userService.insertData(user);*/
-
-        //testing slf4j log
-/*        Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
-        logger.info("Admin Logged");*/
-
         //testing logging Wrapper functionality
         LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
         logWrapper.info("Admin Logged");

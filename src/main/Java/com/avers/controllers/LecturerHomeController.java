@@ -1,7 +1,9 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
+import com.avers.dao.SubjectDAO;
 import com.avers.dto.StudentDTO;
+import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
@@ -48,14 +50,8 @@ public class LecturerHomeController {
 
         if (subjectcode != null && !subjectcode.trim().isEmpty() & subjectname != null && !subjectname.trim().isEmpty() & semester != null && !semester.trim().isEmpty()) {
 
-            //TODO complete this
-/*            //insert data into user tables;
-            UserDTO user = new UserDTO(username, password);
-            userService.insertUser(user);
-
-            //insert data into user_roles;
-            UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
-            userService.insertUserRole(userRoles);*/
+            SubjectDTO subjectDTO = new SubjectDTO(subjectcode,subjectname,Integer.parseInt(semester));
+            userService.insertSubject(subjectDTO);
 
             model.addObject("message", "Submitted");
 
