@@ -16,8 +16,12 @@ import java.util.Map;
  */
 public class UserDAOImpl extends JdbcDaoSupport implements UserDAO {
 
+    private DataSource dataSource;
+
     @Autowired
-    DataSource dataSource;
+    UserDAOImpl(DataSource dataSource){
+        setDataSource(dataSource);
+    }
 
     public void insertUser(UserDTO user) {
 

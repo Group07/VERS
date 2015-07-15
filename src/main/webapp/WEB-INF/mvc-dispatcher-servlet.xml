@@ -18,7 +18,9 @@
     <mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
     <mvc:resources mapping="/jquery-ui/**" location="/jquery-ui/"/>
 
-    <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
+    <bean id="userDao" class="com.avers.dao.UserDAOImpl">
+        <constructor-arg index="0" ref="dataSource"/>
+    </bean>
     <bean id="userRoleDao" class="com.avers.dao.UserRoleDAOImpl"/>
     <bean id="StudentDAO" class="com.avers.dao.StudentDAOImpl"/>
     <bean id="SubjectDAO" class="com.avers.dao.SubjectDAOImpl"/>
