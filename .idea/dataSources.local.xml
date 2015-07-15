@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - aversdb@localhost" uuid="b28b4f98-fea7-4f52-b0a2-263a15856d8d" />
+    <data-source name="MySQL - aversdb@localhost" uuid="8f4a74d1-ed88-45a9-af4e-8b4b387620ab">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>aversdb.*</schema-pattern>
+      <default-schemas>aversdb.*</default-schemas>
+    </data-source>
   </component>
 </project>

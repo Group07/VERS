@@ -1,5 +1,6 @@
 package com.avers.services;
 
+import com.avers.dto.StudentDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 
@@ -9,4 +10,6 @@ import com.avers.dto.UserRolesDTO;
 public interface UserService {
     void insertUser(UserDTO user);
     void insertUserRole(UserRolesDTO userRolesDTO);
+
+    void insertStudent(StudentDTO student);
 }
