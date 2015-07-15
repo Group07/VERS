@@ -13,11 +13,10 @@ public interface UserService {
     void insertUser(UserDTO user);
 
     void insertUserRole(UserRolesDTO userRolesDTO);
+
     void insertStudent(StudentDTO student);
-<<<<<<< HEAD
+
     void insertSubject(SubjectDTO subject);
-=======
 
     void insertMarks(MarksDTO marksDTO);
->>>>>>> Dao for marks was added
 }

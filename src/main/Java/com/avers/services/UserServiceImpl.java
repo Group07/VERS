@@ -11,6 +11,7 @@ import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * Created by GoldBows on 7/9/2015.
@@ -27,11 +28,8 @@ public class UserServiceImpl implements UserService {
     StudentDAO studentDAO;
 
     @Autowired
-<<<<<<< HEAD
     SubjectDAO subjectDAO;
-=======
     MarksDAO marksDAO;
->>>>>>> Dao for marks was added
 
     @Override
     public void insertUser(UserDTO user) {
@@ -49,12 +47,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-<<<<<<< HEAD
     public void insertSubject(SubjectDTO subject) {
         subjectDAO.insertSubject(subject);
-=======
+    }
     public void insertMarks(MarksDTO marksDTO) {
         marksDAO.insertMarks(marksDTO);
->>>>>>> Dao for marks was added
     }
 }

@@ -20,13 +20,9 @@
 
     <bean id="userDao" class="com.avers.dao.UserDAOImpl"/>
     <bean id="userRoleDao" class="com.avers.dao.UserRoleDAOImpl"/>
-<<<<<<< HEAD
     <bean id="StudentDAO" class="com.avers.dao.StudentDAOImpl"/>
     <bean id="SubjectDAO" class="com.avers.dao.SubjectDAOImpl"/>
-=======
-    <bean id="studentDao" class="com.avers.dao.StudentDAOImpl"/>
     <bean id="marksDao" class="com.avers.dao.MarksDAOImpl"/>
->>>>>>> Dao for marks was added
     <bean id="userService" class="com.avers.services.UserServiceImpl"/>
 
     <mvc:annotation-driven/>

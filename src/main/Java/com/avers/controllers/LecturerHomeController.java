@@ -6,6 +6,8 @@ import com.avers.dto.StudentDTO;
 import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
+import com.avers.dto.*;
+import com.avers.dto.UserDTO;
 import com.avers.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
-import java.security.Principal;
 
 /**
  * Created by Amila on 7/14/2015.
