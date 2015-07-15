@@ -1,22 +1,23 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
-import com.avers.dao.SubjectDAO;
 import com.avers.dto.StudentDTO;
 import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.sql.DataSource;
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Amila on 7/14/2015.
@@ -47,8 +48,6 @@ public class LecturerHomeController {
                                     @RequestParam String semester,
                                     Principal principal) {
 
-        String userName = principal.getName();
-
         ModelAndView model = new ModelAndView();
         model.setViewName("lecturer");
 
@@ -57,7 +56,10 @@ public class LecturerHomeController {
 
         if (subjectcode != null && !subjectcode.trim().isEmpty() & subjectname != null && !subjectname.trim().isEmpty() & semester != null && !semester.trim().isEmpty()) {
 
-            SubjectDTO subjectDTO = new SubjectDTO(subjectcode,subjectname,Integer.parseInt(semester));
+            String userName = principal.getName();
+            int userID = userService.getUserID(userName);
+
+            SubjectDTO subjectDTO = new SubjectDTO(subjectcode, subjectname, Integer.parseInt(semester));
             userService.insertSubject(subjectDTO);
 
             model.addObject("message", "Submitted");

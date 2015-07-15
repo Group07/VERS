@@ -13,4 +13,5 @@ public interface UserService {
     void insertUserRole(UserRolesDTO userRolesDTO);
     void insertStudent(StudentDTO student);
     void insertSubject(SubjectDTO subject);
+    int getUserID(String userName);
 }

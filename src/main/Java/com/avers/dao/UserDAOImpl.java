@@ -4,13 +4,18 @@ import com.avers.Utils.encryption.PasswordEncoderGenerator;
 import com.avers.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by GoldBows on 7/9/2015.
  */
-public class UserDAOImpl implements UserDAO {
+public class UserDAOImpl extends JdbcDaoSupport implements UserDAO {
+
     @Autowired
     DataSource dataSource;
 
@@ -25,5 +30,22 @@ public class UserDAOImpl implements UserDAO {
         jdbcTemplate.update(sql, user.getUsername(), encryptedPassword);
 
 
+    }
+
+    public int getUserID(String userName) {
+        //testing JDBC
+        String sql = "select user_id from  users where username =" + "'" + userName + "'";
+        List<UserDTO> userDTOs = new ArrayList<UserDTO>();
+
+        List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
+        for (Map row : rows) {
+            UserDTO userDTO = new UserDTO();
+            userDTO.setUserID((Integer) row.get("CUST_ID"));
+            userDTOs.add(userDTO);
+        }
+
+        int userID = userDTOs.get(0).getUserID();
+
+        return userID;
     }
 }

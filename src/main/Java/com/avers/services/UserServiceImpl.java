@@ -46,4 +46,9 @@ public class UserServiceImpl implements UserService {
     public void insertSubject(SubjectDTO subject) {
         subjectDAO.insertSubject(subject);
     }
+
+    @Override
+    public int getUserID(String userName) {
+        return userDao.getUserID(userName);
+    }
 }

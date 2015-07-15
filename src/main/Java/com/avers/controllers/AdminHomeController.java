@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.sql.DataSource;
+
 /**
  * Created by Amila on 7/14/2015.
  */
@@ -19,6 +21,9 @@ public class AdminHomeController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    DataSource dataSource;
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public ModelAndView adminPage() {

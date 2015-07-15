@@ -6,6 +6,7 @@ package com.avers.dto;
 public class UserDTO {
     private String username;
     private String password;
+    private int userID;
 
     public UserDTO() {
 
@@ -25,6 +26,14 @@ public class UserDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public UserDTO(String username, String password) {

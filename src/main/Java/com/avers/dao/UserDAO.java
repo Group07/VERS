@@ -10,4 +10,5 @@ public interface UserDAO {
 
     public void insertUser(UserDTO user);
 
+    public int getUserID(String userName);
 }
