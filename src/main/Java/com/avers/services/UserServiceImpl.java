@@ -1,9 +1,11 @@
 package com.avers.services;
 
+import com.avers.dao.MarksDAO;
 import com.avers.dao.StudentDAO;
 import com.avers.dao.SubjectDAO;
 import com.avers.dao.UserDAO;
 import com.avers.dao.UserRoleDAO;
+import com.avers.dto.MarksDTO;
 import com.avers.dto.StudentDTO;
 import com.avers.dto.SubjectDTO;
 import com.avers.dto.UserDTO;
@@ -25,7 +27,11 @@ public class UserServiceImpl implements UserService {
     StudentDAO studentDAO;
 
     @Autowired
+<<<<<<< HEAD
     SubjectDAO subjectDAO;
+=======
+    MarksDAO marksDAO;
+>>>>>>> Dao for marks was added
 
     @Override
     public void insertUser(UserDTO user) {
@@ -43,7 +49,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+<<<<<<< HEAD
     public void insertSubject(SubjectDTO subject) {
         subjectDAO.insertSubject(subject);
+=======
+    public void insertMarks(MarksDTO marksDTO) {
+        marksDAO.insertMarks(marksDTO);
+>>>>>>> Dao for marks was added
     }
 }

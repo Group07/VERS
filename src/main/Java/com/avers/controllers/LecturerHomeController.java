@@ -8,14 +8,13 @@ import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.math.BigDecimal;
 import java.security.Principal;
 
 /**
@@ -69,7 +68,7 @@ public class LecturerHomeController {
     }
 
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-    public ModelAndView addLecturer(@RequestParam String username,
+    public ModelAndView addStudent(@RequestParam String username,
                                     @RequestParam String fullName,
                                     @RequestParam String password,
                                     @RequestParam String studentRegNumber,
@@ -95,6 +94,28 @@ public class LecturerHomeController {
         model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");
         model.setViewName("lecturer");
+
+        return model;
+
+    }
+
+    @RequestMapping(value = "/addMarks", method = RequestMethod.POST)
+    public ModelAndView addMarks(@RequestParam Integer studentID,
+                                    @RequestParam Integer subjectID,
+                                    @RequestParam BigDecimal marks) {
+
+        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
+        logWrapper.info("request to add marks to student: marks = " + marks + ".");
+
+        //insert marks to a student for subject;
+        MarksDTO marksDTO = new MarksDTO(studentID, subjectID, marks);
+        userService.insertMarks(marksDTO);
+
+        //rending output
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Welcome");
+        model.addObject("message", "Submitted");
+        model.setViewName("admin");
 
         return model;
 
