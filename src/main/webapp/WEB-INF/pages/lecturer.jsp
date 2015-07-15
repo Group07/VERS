@@ -23,7 +23,13 @@
 <div id="accordion">
   <h3>Add Subject</h3>
   <div>
-    <p>add subject form here</p>
+    <form method="post" action="/recordsSystem/addSubject">
+      <p><input type="text" name="subjectcode" value="" placeholder="Subject Code"></p>
+      <p><input type="text" name="subjectname" value="" placeholder="Subject Name"></p>
+      <p><input type="text" name="semester" value="" placeholder="Semester"></p>
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+      <p class="submit"><input type="submit" name="commit" value="Add Subject"></p>
+    </form>
   </div>
   <h3>Add Student</h3>
   <div>
@@ -36,8 +42,8 @@
     </form>
   </div>
   <h3>Add Results</h3>
+    <p>add result form goes here</p>
   <div>
-    <p>add result form here</p>
   </div>
 </div>
 
