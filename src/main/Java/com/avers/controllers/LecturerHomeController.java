@@ -1,16 +1,12 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
-<<<<<<< HEAD
 import com.avers.dto.UserDTO;
-import com.avers.dto.UserRolesDTO;
-=======
 import com.avers.dto.StudentDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
->>>>>>> Dao for student was added
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -40,7 +36,6 @@ public class LecturerHomeController {
 
     }
 
-<<<<<<< HEAD
     @RequestMapping(value = "/addLecturer", method = RequestMethod.POST)
     public ModelAndView addLecturer(@RequestParam String subjectcode,
                                     @RequestParam String subjectname,
@@ -68,7 +63,8 @@ public class LecturerHomeController {
         } else {
             model.addObject("message", "Error With submitted parameters");
         }
-=======
+        return null;
+    }
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     public ModelAndView addLecturer(@RequestParam String username,
                                     @RequestParam String fullName,
@@ -96,7 +92,6 @@ public class LecturerHomeController {
         model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");
         model.setViewName("admin");
->>>>>>> Dao for student was added
 
         return model;
 
