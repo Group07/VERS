@@ -3,6 +3,7 @@ package com.avers.services;
 import com.avers.dao.*;
 import com.avers.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * Created by GoldBows on 7/9/2015.
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class UserServiceImpl implements UserService {
 
     @Autowired
+    @Qualifier("userDao")
     UserDAO userDao;
 
     @Autowired
@@ -23,6 +25,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     MarksDAO marksDAO;
+
+    @Autowired
+    LecturerDAO lecturerDAO;
 
     @Override
     public void insertUser(UserDTO user) {
@@ -51,6 +56,10 @@ public class UserServiceImpl implements UserService {
 
     public void insertMarks(MarksDTO marksDTO) {
         marksDAO.insertMarks(marksDTO);
+    }
 
+    @Override
+    public void insertLecturer(LecturerDTO lecturer) {
+        lecturerDAO.insertLecturer(lecturer);
     }
 }

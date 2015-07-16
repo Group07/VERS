@@ -53,7 +53,7 @@ public class LecturerHomeController {
             String userName = principal.getName();
             int userID = userService.getUserID(userName);
 
-            SubjectDTO subjectDTO = new SubjectDTO(subjectcode, subjectname, Integer.parseInt(semester));
+            SubjectDTO subjectDTO = new SubjectDTO(subjectcode, subjectname, String.valueOf(userID), Integer.parseInt(semester));
             userService.insertSubject(subjectDTO);
 
             model.addObject("message", "Submitted");

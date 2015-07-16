@@ -1,6 +1,7 @@
 package com.avers.controllers;
 
 import com.avers.Utils.audit.LogWrapper;
+import com.avers.dto.LecturerDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
@@ -11,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.sql.DataSource;
-
 /**
  * Created by Amila on 7/14/2015.
  */
@@ -21,9 +20,6 @@ public class AdminHomeController {
 
     @Autowired
     UserService userService;
-
-    @Autowired
-    DataSource dataSource;
 
     @RequestMapping(value = "/admin**", method = RequestMethod.GET)
     public ModelAndView adminPage() {
@@ -60,6 +56,13 @@ public class AdminHomeController {
             //insert data into user_roles;
             UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
             userService.insertUserRole(userRoles);
+
+            //get userID of inserted lecturer
+            int userID = userService.getUserID(username);
+
+            //insert data into lecturer
+            LecturerDTO lecturer = new LecturerDTO(userID, fullname, 1); //FIXME privilege id hardcoded to 1
+            userService.insertLecturer(lecturer);
 
             model.addObject("message", "Submitted");
 

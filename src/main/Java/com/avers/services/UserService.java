@@ -1,10 +1,6 @@
 package com.avers.services;
 
-import com.avers.dto.MarksDTO;
-import com.avers.dto.StudentDTO;
-import com.avers.dto.SubjectDTO;
-import com.avers.dto.UserDTO;
-import com.avers.dto.UserRolesDTO;
+import com.avers.dto.*;
 
 /**
  * Created by GoldBows on 7/9/2015.
@@ -22,4 +18,5 @@ public interface UserService {
 
     void insertMarks(MarksDTO marksDTO);
 
+    void insertLecturer(LecturerDTO lecturer);
 }
