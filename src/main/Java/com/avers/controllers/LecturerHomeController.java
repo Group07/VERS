@@ -74,23 +74,31 @@ public class LecturerHomeController {
         LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("request to create student: username = " + username + " & full name = " + fullName);
 
-        //insert data into user tables;
-        UserDTO user = new UserDTO(username, password);
-        userService.insertUser(user);
-
-        //insert data into user_roles;
-        UserRolesDTO userRoles = new UserRolesDTO("ROLE_LECTURER", username);
-        userService.insertUserRole(userRoles);
-
-        //insert data into student tables;
-        StudentDTO student = new StudentDTO(fullName, studentRegNumber, dateOfBirth);
-        userService.insertStudent(student);
-
-        //rending output
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Welcome");
-        model.addObject("message", "Submitted");
-        model.setViewName("lecturer");
+
+        if (username != null && !fullName.trim().isEmpty() & password != null && !studentRegNumber.isEmpty() && dateOfBirth != null) {
+
+
+            //insert data into user tables;
+            UserDTO user = new UserDTO(username, password);
+            userService.insertUser(user);
+
+            //insert data into user_roles;
+            UserRolesDTO userRoles = new UserRolesDTO("ROLE_STUDENT", username);
+            userService.insertUserRole(userRoles);
+
+            //insert data into student tables;
+            StudentDTO student = new StudentDTO(fullName, studentRegNumber, dateOfBirth);
+            userService.insertStudent(student);
+
+            //rending output
+            model.addObject("title", "Welcome");
+            model.addObject("message", "Submitted");
+            model.setViewName("lecturer");
+
+        } else {
+            model.addObject("message", "Error With submitted parameters");
+        }
 
         return model;
 

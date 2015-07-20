@@ -35,8 +35,10 @@
   <div>
     <form method="post" action="/recordsSystem/addStudent">
       <p><input type="text" name="username" value="" placeholder="Username"></p>
-      <p><input type="text" name="fullname" value="" placeholder="Full Name"></p>
+      <p><input type="text" name="fullName" value="" placeholder="Full Name"></p>
       <p><input type="password" name="password" value="" placeholder="Password"></p>
+      <p><input type="text" name="studentRegNumber" value="" placeholder="Registration Number"></p>
+      <p><input type="date" pattern='yyyy-MM-dd' name="dateOfBirth" value="" placeholder="Date of Birth"> </p>
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
       <p class="submit"><input type="submit" name="commit" value="Create User"></p>
     </form>
