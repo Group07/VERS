@@ -28,6 +28,8 @@ public class LecturerHomeController {
         ModelAndView model = new ModelAndView();
         model.setViewName("lecturer");
 
+        //TODO select all the students and subjects  correspond to lecture and send them to frontend
+
         //testing logging Wrapper functionality
         LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("lecturer Logged");

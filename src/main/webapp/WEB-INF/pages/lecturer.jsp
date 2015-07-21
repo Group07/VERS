@@ -5,6 +5,7 @@
 <head>
   <title>AVERS</title>
   <script type='text/javascript' src="<c:url value='/JS/jquery-1.10.1.min.js'/>"></script>
+  <script type='text/javascript' src="<c:url value='/JS/lecturer.js'/>"></script>
   <script type='text/javascript' src="<c:url value='/bootstrap/js/bootstrap.min.js'/>"></script>
   <script type='text/javascript' src="<c:url value='/jquery-ui/jquery-ui.min.js'/>"></script>
   <link href="<c:url value='/CSS/main.css'/>" type="text/css" rel="stylesheet">
@@ -44,8 +45,15 @@
     </form>
   </div>
   <h3>Add Results</h3>
-    <p>add result form goes here</p>
   <div>
+    <form method="post" action="/recordsSystem/addMarks">
+      <p>Register Number &nbsp<select name="studentRegNum" id="studentRegNum"></select></p>
+      <p>Subject &nbsp<select name="subject" id="studentSubject"></select></p>
+      <p>Marks &nbsp<input type="text" name="marks" value="" placeholder="marks"></p>
+      <p>Grade &nbsp<input type="text" name="grade" value="" placeholder="grade"></p>
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+      <p class="submit"><input type="submit" name="commit" value="Add Marks"></p>
+    </form>
   </div>
 </div>
 
