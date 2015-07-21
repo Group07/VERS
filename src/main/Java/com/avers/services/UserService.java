@@ -2,6 +2,8 @@ package com.avers.services;
 
 import com.avers.dto.*;
 
+import java.util.List;
+
 /**
  * Created by GoldBows on 7/9/2015.
  */
@@ -19,4 +21,6 @@ public interface UserService {
     void insertMarks(MarksDTO marksDTO);
 
     void insertLecturer(LecturerDTO lecturer);
+
+    List<SubjectDTO> getSubjectsByLecturer(int userID);
 }

@@ -5,6 +5,8 @@ import com.avers.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import java.util.List;
+
 /**
  * Created by GoldBows on 7/9/2015.
  */
@@ -61,5 +63,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void insertLecturer(LecturerDTO lecturer) {
         lecturerDAO.insertLecturer(lecturer);
+    }
+
+    @Override
+    public List<SubjectDTO> getSubjectsByLecturer(int userID) {
+        return subjectDAO.getSubjectsByLecturer(userID);
     }
 }

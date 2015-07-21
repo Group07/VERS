@@ -5,10 +5,11 @@ package com.avers.dto;
  */
 public class SubjectDTO {
 
-    public String subjectCode;
-    public String SubjectName;
-    public String lecturerID;
-    public int semester;
+    private String subjectID;
+    private String subjectCode;
+    private String SubjectName;
+    private String lecturerID;
+    private int semester;
 
     public String getSubjectCode() {
         return subjectCode;
@@ -40,6 +41,14 @@ public class SubjectDTO {
 
     public void setSemester(int semester) {
         this.semester = semester;
+    }
+
+    public String getSubjectID() {
+        return subjectID;
+    }
+
+    public void setSubjectID(String subjectID) {
+        this.subjectID = subjectID;
     }
 
     public SubjectDTO(String subjectCode, String subjectName, String lecturerID, int semester) {
