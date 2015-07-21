@@ -40,9 +40,9 @@ public class SubjectDAOImpl implements SubjectDAO {
         for (Map row : rows) {
             SubjectDTO subjectDTO = new SubjectDTO();
             subjectDTO.setSubjectCode((String)row.get("subject_code"));
-            subjectDTO.setSubjectID((String) row.get("subject_id"));
+            subjectDTO.setSubjectID((Integer) row.get("subject_id"));
             subjectDTO.setSubjectName((String) row.get("subject_name"));
-            subjectDTO.setSubjectName((String) row.get("semester"));
+            subjectDTO.setSemester((Integer) row.get("semester"));
 
             subjectDTOs.add(subjectDTO);
         }

@@ -5,9 +5,9 @@
 <head>
   <title>AVERS</title>
   <script type='text/javascript' src="<c:url value='/JS/jquery-1.10.1.min.js'/>"></script>
+  <script type='text/javascript' src="<c:url value='/jquery-ui/jquery-ui.min.js'/>"></script>
   <script type='text/javascript' src="<c:url value='/JS/lecturer.js'/>"></script>
   <script type='text/javascript' src="<c:url value='/bootstrap/js/bootstrap.min.js'/>"></script>
-  <script type='text/javascript' src="<c:url value='/jquery-ui/jquery-ui.min.js'/>"></script>
   <link href="<c:url value='/CSS/main.css'/>" type="text/css" rel="stylesheet">
   <link href="<c:url value='/bootstrap/css/bootstrap.min.css'/>" type="text/css" rel="stylesheet">
   <link href="<c:url value='/bootstrap/css/bootstrap-theme.min.css'/>" type="text/css" rel="stylesheet">

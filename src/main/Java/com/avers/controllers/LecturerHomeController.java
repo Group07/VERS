@@ -8,10 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
 import java.security.Principal;
+import java.util.List;
 
 /**
  * Created by Amila on 7/14/2015.
@@ -127,4 +129,17 @@ public class LecturerHomeController {
         return model;
 
     }
+
+    @RequestMapping(value = "/getSubjectList", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    List<SubjectDTO> getLectureSubjects(Principal principal) {
+
+        String userName = principal.getName();
+        int userID = userService.getUserID(userName);
+        List<SubjectDTO> subjectDTOList = userService.getSubjectsByLecturer(userID);
+        return subjectDTOList;
+    }
+
+
 }
