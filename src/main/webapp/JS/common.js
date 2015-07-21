@@ -2,13 +2,16 @@
  * Created by Amila on 7/21/2015.
  */
 
-avers.common = (function() {
+var avers_common = (function() {
 
-    var function1 = function() {};
-    var function2 = function() {};
+    var populateDropDown = function(dropDown,data,valueString,nameString) {
+        dropDown.empty();
+        $.each(data, function () {
+            dropDown.append($("<option></option>").val(this[valueString]).html(this[nameString]));
+        });
+    };
 
     return {
-        function1:function1,
-        function2:function2
+        populateDropDown:populateDropDown
     }
-}());
+})();

@@ -8,12 +8,8 @@ $(document).ready(function () {
         type: 'GET',
         success: function (data) {
             //called when successful
-            console.log(data);
             var subjectDropdown = $("#studentSubject");
-            subjectDropdown.empty();
-            $.each(data, function () {
-                subjectDropdown.append($("<option></option>").val(this['subjectCode']).html(this['subjectName']));
-            });
+            avers_common.populateDropDown(subjectDropdown,data,'subjectCode','subjectName');
         },
         error: function (e) {
             //called when there is an error
