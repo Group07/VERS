@@ -48,6 +48,13 @@ public class StudentDTO {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public StudentDTO(Integer studentID, String fullName, String studentRegNumber, String dateOfBirth) {
+        this.studentID = studentID;
+        this.fullName = fullName;
+        this.studentRegNumber = studentRegNumber;
+        this.dateOfBirth = dateOfBirth;
+    }
+
     public StudentDTO() {
 
     }

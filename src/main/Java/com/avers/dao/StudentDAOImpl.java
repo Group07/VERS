@@ -19,11 +19,11 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public void insertStudent(StudentDTO student) {
-        String sql = "INSERT INTO student" + "(student_name,student_reg_no,date_of_birth) VALUES(?,?,?)";
+        String sql = "INSERT INTO student" + "(student_id,student_name,student_reg_no,date_of_birth) VALUES(?,?,?,?)";
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
-        jdbcTemplate.update(sql, student.getFullName(), student.getStudentRegNumber(), student.getDateOfBirth());
+        jdbcTemplate.update(sql, student.getStudentID(), student.getFullName(), student.getStudentRegNumber(), student.getDateOfBirth());
     }
 
     @Override

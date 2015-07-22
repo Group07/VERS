@@ -89,8 +89,10 @@ public class LecturerHomeController {
             UserRolesDTO userRoles = new UserRolesDTO("ROLE_STUDENT", username);
             userService.insertUserRole(userRoles);
 
+            int userID = userService.getUserID(username);
+
             //insert data into student tables;
-            StudentDTO student = new StudentDTO(fullName, studentRegNumber, dateOfBirth);
+            StudentDTO student = new StudentDTO(userID,fullName, studentRegNumber, dateOfBirth);
             userService.insertStudent(student);
 
             //rending output
