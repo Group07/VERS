@@ -9,7 +9,7 @@ $(document).ready(function () {
         type: 'GET',
         success: function (data) {
             var subjectDropdown = $("#studentSubject");
-            avers_common.populateDropDown(subjectDropdown, data, 'subjectCode', 'subjectName');
+            avers_common.populateDropDown(subjectDropdown, data, 'subjectID', 'subjectCode');
         },
         error: function (e) {
             console.log(e);

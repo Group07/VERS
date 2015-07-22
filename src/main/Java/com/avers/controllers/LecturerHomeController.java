@@ -110,13 +110,15 @@ public class LecturerHomeController {
     @RequestMapping(value = "/addMarks", method = RequestMethod.POST)
     public ModelAndView addMarks(@RequestParam Integer studentID,
                                  @RequestParam Integer subjectID,
-                                 @RequestParam BigDecimal marks) {
+                                 @RequestParam float marks) {
 
         LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("request to add marks to student: marks = " + marks + ".");
 
+        BigDecimal marksBD = new BigDecimal(marks);
+
         //insert marks to a student for subject;
-        MarksDTO marksDTO = new MarksDTO(studentID, subjectID, marks);
+        MarksDTO marksDTO = new MarksDTO(studentID, subjectID, marksBD);
         userService.insertMarks(marksDTO);
 
         //rending output
