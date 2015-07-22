@@ -30,8 +30,6 @@ public class LecturerHomeController {
         ModelAndView model = new ModelAndView();
         model.setViewName("lecturer");
 
-        //TODO select all the students and subjects  correspond to lecture and send them to frontend
-
         //testing logging Wrapper functionality
         LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
         logWrapper.info("lecturer Logged");
@@ -137,8 +135,14 @@ public class LecturerHomeController {
 
         String userName = principal.getName();
         int userID = userService.getUserID(userName);
-        List<SubjectDTO> subjectDTOList = userService.getSubjectsByLecturer(userID);
-        return subjectDTOList;
+        return userService.getSubjectsByLecturer(userID);
+    }
+
+    @RequestMapping(value = "/getStudentList", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    List<StudentDTO> getLectureStudents() {
+        return userService.getAllStudents();
     }
 
 

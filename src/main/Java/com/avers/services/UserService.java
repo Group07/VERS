@@ -23,4 +23,6 @@ public interface UserService {
     void insertLecturer(LecturerDTO lecturer);
 
     List<SubjectDTO> getSubjectsByLecturer(int userID);
+
+    List<StudentDTO> getAllStudents();
 }

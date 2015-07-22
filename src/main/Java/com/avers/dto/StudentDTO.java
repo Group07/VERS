@@ -5,6 +5,7 @@ package com.avers.dto;
  */
 public class StudentDTO {
 
+    private Integer studentID;
     private String fullName;
     private String studentRegNumber;
     private String dateOfBirth;
@@ -33,6 +34,13 @@ public class StudentDTO {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Integer getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(Integer studentID) {
+        this.studentID = studentID;
+    }
 
     public StudentDTO(String fullName, String studentRegNumber, String dateOfBirth) {
         this.fullName = fullName;

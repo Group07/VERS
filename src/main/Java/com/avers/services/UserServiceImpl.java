@@ -69,4 +69,9 @@ public class UserServiceImpl implements UserService {
     public List<SubjectDTO> getSubjectsByLecturer(int userID) {
         return subjectDAO.getSubjectsByLecturer(userID);
     }
+
+    @Override
+    public List<StudentDTO> getAllStudents() {
+        return studentDAO.getAllStudents();
+    }
 }
