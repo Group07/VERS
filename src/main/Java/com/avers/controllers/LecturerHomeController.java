@@ -94,7 +94,6 @@ public class LecturerHomeController {
             userService.insertStudent(student);
 
             //rending output
-            model.addObject("title", "Welcome");
             model.addObject("message", "Submitted");
             model.setViewName("lecturer");
 
@@ -120,9 +119,8 @@ public class LecturerHomeController {
 
         //rending output
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Welcome");
         model.addObject("message", "Submitted");
-        model.setViewName("admin");
+        model.setViewName("lecturer");
 
         return model;
 

@@ -8,13 +8,10 @@ $(document).ready(function () {
         url: '/recordsSystem/getSubjectList',
         type: 'GET',
         success: function (data) {
-            //called when successful
             var subjectDropdown = $("#studentSubject");
-            avers_common.populateDropDown(subjectDropdown,data,'subjectCode','subjectName');
+            avers_common.populateDropDown(subjectDropdown, data, 'subjectCode', 'subjectName');
         },
         error: function (e) {
-            //called when there is an error
-            //console.log(e.message);
             console.log(e);
         }
     });
@@ -24,13 +21,10 @@ $(document).ready(function () {
         url: '/recordsSystem/getStudentList',
         type: 'GET',
         success: function (data) {
-            //called when successful
             var subjectDropdown = $("#studentRegNum");
-            avers_common.populateDropDown(subjectDropdown,data,'studentID','studentRegNumber');
+            avers_common.populateDropDown(subjectDropdown, data, 'studentID', 'studentRegNumber');
         },
         error: function (e) {
-            //called when there is an error
-            //console.log(e.message);
             console.log(e);
         }
     });

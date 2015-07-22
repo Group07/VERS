@@ -48,8 +48,8 @@
   <h3>Add Results</h3>
   <div>
     <form method="post" action="/recordsSystem/addMarks">
-      <p>Register Number &nbsp<select name="studentRegNum" id="studentRegNum"></select></p>
-      <p>Subject &nbsp<select name="subject" id="studentSubject"></select></p>
+      <p>Register Number &nbsp<select name="studentID" id="studentRegNum"></select></p>
+      <p>Subject &nbsp<select name="subjectID" id="studentSubject"></select></p>
       <p>Marks &nbsp<input type="text" name="marks" value="" placeholder="marks"></p>
       <p>Grade &nbsp<input type="text" name="grade" value="" placeholder="grade"></p>
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
