@@ -1,8 +1,9 @@
 package com.avers.controllers;
 
-import com.avers.Utils.audit.LogWrapper;
 import com.avers.dto.*;
 import com.avers.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import java.util.List;
 @Controller
 public class LecturerHomeController {
 
+    private static final Logger slf4jLogger = LoggerFactory.getLogger(LecturerHomeController.class);
     @Autowired
     UserService userService;
 
@@ -31,8 +33,11 @@ public class LecturerHomeController {
         model.setViewName("lecturer");
 
         //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
-        logWrapper.info("lecturer Logged");
+/*        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
+        logWrapper.info("lecturer Logged");*/
+
+        //testing logback
+        slf4jLogger.trace("Lecture Logged");
 
         return model;
 
@@ -46,9 +51,6 @@ public class LecturerHomeController {
 
         ModelAndView model = new ModelAndView();
         model.setViewName("lecturer");
-
-        LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
-        logWrapper.info("request to create subject: subjectcode = " + subjectcode + " & subjectname = " + subjectname + " & semester = " + semester);
 
         if (subjectcode != null && !subjectcode.trim().isEmpty() & subjectname != null && !subjectname.trim().isEmpty() & semester != null && !semester.trim().isEmpty()) {
 
@@ -73,9 +75,6 @@ public class LecturerHomeController {
                                    @RequestParam String studentRegNumber,
                                    @RequestParam String dateOfBirth) {
 
-        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
-        logWrapper.info("request to create student: username = " + username + " & full name = " + fullName);
-
         ModelAndView model = new ModelAndView();
 
         if (username != null && !fullName.trim().isEmpty() & password != null && !studentRegNumber.isEmpty() && dateOfBirth != null) {
@@ -92,7 +91,7 @@ public class LecturerHomeController {
             int userID = userService.getUserID(username);
 
             //insert data into student tables;
-            StudentDTO student = new StudentDTO(userID,fullName, studentRegNumber, dateOfBirth);
+            StudentDTO student = new StudentDTO(userID, fullName, studentRegNumber, dateOfBirth);
             userService.insertStudent(student);
 
             //rending output
@@ -111,9 +110,6 @@ public class LecturerHomeController {
     public ModelAndView addMarks(@RequestParam Integer studentID,
                                  @RequestParam Integer subjectID,
                                  @RequestParam float marks) {
-
-        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
-        logWrapper.info("request to add marks to student: marks = " + marks + ".");
 
         BigDecimal marksBD = new BigDecimal(marks);
 

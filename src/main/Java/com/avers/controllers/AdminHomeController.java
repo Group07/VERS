@@ -1,10 +1,12 @@
 package com.avers.controllers;
 
-import com.avers.Utils.audit.LogWrapper;
 import com.avers.dto.LecturerDTO;
 import com.avers.dto.UserDTO;
 import com.avers.dto.UserRolesDTO;
 import com.avers.services.UserService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +31,12 @@ public class AdminHomeController {
         model.setViewName("admin");
 
         //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
-        logWrapper.info("Admin Logged");
+        final Logger logger = LoggerFactory.getLogger(AdminHomeController.class);
+
+        //testing Logback
+        logger.debug("Admin Logged");
+        logger.info("Admin Logged");
+        logger.warn("Admin Logged");
 
         return model;
 
@@ -43,9 +49,6 @@ public class AdminHomeController {
 
         ModelAndView model = new ModelAndView();
         model.setViewName("admin");
-
-        LogWrapper logWrapper = new LogWrapper(AdminHomeController.class);
-        logWrapper.info("request to create lecturer: username = " + username + " & full name = " + fullname);
 
         if (username != null && !username.trim().isEmpty() & fullname != null && !fullname.trim().isEmpty() & password != null && !password.trim().isEmpty()) {
 

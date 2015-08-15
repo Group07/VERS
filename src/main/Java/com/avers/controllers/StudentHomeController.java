@@ -1,6 +1,5 @@
 package com.avers.controllers;
 
-import com.avers.Utils.audit.LogWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,10 +16,6 @@ public class StudentHomeController {
 
         ModelAndView model = new ModelAndView();
         model.setViewName("student");
-
-        //testing logging Wrapper functionality
-        LogWrapper logWrapper = new LogWrapper(StudentHomeController.class);
-        logWrapper.info("student Logged");
 
         return model;
 
