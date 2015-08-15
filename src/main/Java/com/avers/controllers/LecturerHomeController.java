@@ -1,9 +1,8 @@
 package com.avers.controllers;
 
+import com.avers.Utils.audit.AuditLog;
 import com.avers.dto.*;
 import com.avers.services.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,22 +21,19 @@ import java.util.List;
 @Controller
 public class LecturerHomeController {
 
-    private static final Logger slf4jLogger = LoggerFactory.getLogger(LecturerHomeController.class);
+    final static AuditLog lectureLogger = new AuditLog(LecturerHomeController.class);
+
     @Autowired
     UserService userService;
 
     @RequestMapping(value = "/lecturer**", method = RequestMethod.GET)
-    public ModelAndView adminPage() {
+    public ModelAndView adminPage(Principal principal) {
 
         ModelAndView model = new ModelAndView();
         model.setViewName("lecturer");
 
-        //testing logging Wrapper functionality
-/*        LogWrapper logWrapper = new LogWrapper(LecturerHomeController.class);
-        logWrapper.info("lecturer Logged");*/
-
-        //testing logback
-        slf4jLogger.trace("Lecture Logged");
+        String userName = principal.getName();
+        lectureLogger.log("Admin Logged, UserName = " + userName);
 
         return model;
 
