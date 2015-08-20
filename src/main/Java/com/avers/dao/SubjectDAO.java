@@ -12,4 +12,6 @@ public interface SubjectDAO {
     public void insertSubject(SubjectDTO subjectDTO);
 
     public List<SubjectDTO> getSubjectsByLecturer(int userID);
+
+    List<SubjectDTO> getSubjectsByStudent(int userID);
 }

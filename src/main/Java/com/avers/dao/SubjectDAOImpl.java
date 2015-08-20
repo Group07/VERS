@@ -39,7 +39,29 @@ public class SubjectDAOImpl implements SubjectDAO {
         List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
         for (Map row : rows) {
             SubjectDTO subjectDTO = new SubjectDTO();
-            subjectDTO.setSubjectCode((String)row.get("subject_code"));
+            subjectDTO.setSubjectCode((String) row.get("subject_code"));
+            subjectDTO.setSubjectID((Integer) row.get("subject_id"));
+            subjectDTO.setSubjectName((String) row.get("subject_name"));
+            subjectDTO.setSemester((Integer) row.get("semester"));
+
+            subjectDTOs.add(subjectDTO);
+        }
+
+        return subjectDTOs;
+    }
+
+    @Override
+    public List<SubjectDTO> getSubjectsByStudent(int userID) {
+
+        String sql = "select ss.subject_id, s.subject_code, s.subject_name, s.semester from student_by_subjects as ss, subject as s where ss.subject_id = s.subject_id and student_id=" + userID;
+        List<SubjectDTO> subjectDTOs = new ArrayList<SubjectDTO>();
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+        List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
+        for (Map row : rows) {
+            SubjectDTO subjectDTO = new SubjectDTO();
+            subjectDTO.setSubjectCode((String) row.get("subject_code"));
             subjectDTO.setSubjectID((Integer) row.get("subject_id"));
             subjectDTO.setSubjectName((String) row.get("subject_name"));
             subjectDTO.setSemester((Integer) row.get("semester"));

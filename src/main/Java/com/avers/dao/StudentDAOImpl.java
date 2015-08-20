@@ -51,4 +51,16 @@ public class StudentDAOImpl implements StudentDAO {
 
         return studentDTOs;
     }
+
+    @Override
+    public String getResultsForStudents(int userID, String subjectId) {
+
+        String sql = "SELECT marks FROM student_by_subjects WHERE student_id =" + userID + " AND subject_id =" + subjectId;
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+        String result = jdbcTemplate.queryForObject(sql, String.class);
+
+        return result;
+    }
 }

@@ -10,4 +10,5 @@ import java.util.List;
 public interface StudentDAO {
     void insertStudent(StudentDTO student);
     public List<StudentDTO> getAllStudents();
+    String getResultsForStudents(int userID, String subjectId);
 }

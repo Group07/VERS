@@ -24,5 +24,9 @@ public interface UserService {
 
     List<SubjectDTO> getSubjectsByLecturer(int userID);
 
+    List<SubjectDTO> getSubjectsByStudent(int userID);
+
     List<StudentDTO> getAllStudents();
+
+    String getResultsForStudents(int userID, String subjectId);
 }

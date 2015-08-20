@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - aversdb@localhost" uuid="8f4a74d1-ed88-45a9-af4e-8b4b387620ab" />
+    <data-source name="MySQL - aversdb@localhost" uuid="8f4a74d1-ed88-45a9-af4e-8b4b387620ab">
+      <user-name>root</user-name>
+    </data-source>
     <data-source name="MySQL - aversdb@localhost [2]" uuid="41163fe9-4a4a-43d0-9d34-1507b4e97950" />
   </component>
 </project>
