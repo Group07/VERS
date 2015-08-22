@@ -24,20 +24,18 @@
   <h4  class="alignCenter">${message}</h4>
 </c:if>
 
+<div id="accordion">
 <h3>View Results</h3>
 <div>
   <form method="post" action="/recordsSystem/viewResult">
-    <p>Subject &nbsp<select name="subjectID" id="studentSubject"></select></p>
+    <div>Subject &nbsp<select name="subjectID" id="studentSubject"></select> <c:if test="${not empty marks}"><span  class="alignRight marks">${marks}</span></c:if> </div>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    <p class="submit"><input type="submit" name="commit" value="View Result"></p>
+    <div class="submit"><input type="submit" name="commit" value="View Result"></div>
   </form>
-
-  <c:if test="${not empty marks}">
-    Marks
-    <h4  class="alignLeft">${marks}</h4>
-  </c:if>
 </div>
-
+<h3>Get Result Sheet</h3>
+  <div></div>
+</div>
 <%--imported code--%>
 
 <c:url value="/j_spring_security_logout" var="logoutUrl"/>
@@ -46,6 +44,13 @@
   <input type="hidden" name="${_csrf.parameterName}"
          value="${_csrf.token}"/>
 </form>
+
+
+<script>
+  $("#accordion").accordion({
+    heightStyle: "content"
+  });
+</script>
 
 <script>
   function formSubmit() {
@@ -61,5 +66,6 @@
           href="javascript:formSubmit()"> Logout</a>
   </h5>
 </c:if>
+
 </body>
 </html>

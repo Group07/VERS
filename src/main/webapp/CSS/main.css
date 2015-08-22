@@ -16,3 +16,16 @@ h2{
 .alignCenter{
     text-align: center;
 }
+
+.alignRight{
+    float: right;
+}
+
+.marks{
+    display: inline-block;
+    font-size: 1.1em;
+    width: 100px;
+    color: lightcyan;
+    background-color: #743a71;
+    text-align: center;
+}
